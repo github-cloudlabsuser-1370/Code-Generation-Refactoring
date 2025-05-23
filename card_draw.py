@@ -12,4 +12,16 @@ random.shuffle(deck)
 # draw five cards
 print("You got:")
 for i in range(5):
-    print(deck[i][0], "of", deck[i][1])
+    value = deck[i][0]
+    # Map special card values to names
+    if value == 1:
+        value_str = "Ace"
+    elif value == 11:
+        value_str = "Jack"
+    elif value == 12:
+        value_str = "Queen"
+    elif value == 13:
+        value_str = "King"
+    else:
+        value_str = str(value)
+    print(value_str, "of", deck[i][1])
