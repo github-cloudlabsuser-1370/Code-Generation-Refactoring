@@ -2,11 +2,18 @@
 
 MAX = 100
 
-def calculate_sum(arr):
-   result = 0
-   for num in arr:
-      result += num
-   return result
+def calculate_sum(numbers: list[int]) -> int:
+    """
+    Calculate the sum of a list of integers.
+
+    Args:
+        numbers (list[int]): A list of integers to sum.
+
+    Returns:
+        int: The sum of all integers in the list.
+    """
+    # Use Python's built-in sum function for efficiency and clarity
+    return sum(numbers)
 
 def main():
    try:
